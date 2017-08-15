@@ -5,17 +5,47 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Bishal Mondal' ,
-    heading: 'Article One' ,
-    date: '13th August, 2017',
-    content: `<p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one.This is article one.This is article one.This is article one.
-               </p>
-                
-                <p>
-                    This is article one. This is article one. This is article one. This is article one. This is article one.This is article one.This is article one.This is article one.
-                </p>` ,
+var articles = { 
+    articleOne : {
+        title: 'Article One | Bishal Mondal' ,
+        heading: 'Article One' ,
+        date: '13th August, 2017',
+        content: `<p>
+                        This is article one. This is article one. This is article one. This is article one. This is article one.This is article one.This is article one.This is article one.
+                   </p>
+                    
+                    <p>
+                        This is article one. This is article one. This is article one. This is article one. This is article one.This is article one.This is article one.This is article one.
+                    </p>` ,
+        
+    },
+    articleTwo : {
+        title: 'Article Two | Bishal Mondal' ,
+        heading: 'Article Two' ,
+        date: '14th August, 2017',
+        content: `<p>
+                        This is article two.  This is article two.  This is article two.  This is article two.  This is article two.  This is article two.  This is article two. 
+                   </p>
+                    
+                    <p>
+                         This is article two.  This is article two.  This is article two.  This is article two.  This is article two.  This is article two.  This is article two. 
+                    </p>` ,
+    
+    },
+    articleThree : {
+        title: 'Article Three | Bishal Mondal' ,
+        heading: 'Article Three' ,
+        date: '15th August, 2017',
+        content: `<p>
+                        This is article three.  This is article three.This is article three.This is article three.This is article three.This is article three.This is article three. 
+                   </p>
+                    
+                    <p>
+                        This is article three.This is article three.This is article three.This is article three.This is article three.This is article three.This is article three.
+                    </p>` ,
+        
+    }
+    
     
 };
 
@@ -72,8 +102,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Article-one', function(req, res){
-    res.send(createtemplate(articleOne));
+app.get('/:articlename', function(req, res){
+    //articleName = Article-one
+    //articles[articleName] == {} content object for article one
+    var articleName = req.params.articleName;
+    res.send(createtemplate(articles[articleName]));
 });
 
 app.get('/Article-two', function(req, res){
