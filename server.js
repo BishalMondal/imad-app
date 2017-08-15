@@ -30,7 +30,7 @@ function createtemplate(data){
         <html>
     <head>
         <title>
-            $(title)
+            &(title)
         </title>
     
     <link href="/ui/style.css" rel="stylesheet" />
@@ -45,15 +45,15 @@ function createtemplate(data){
             
             <div>
             <h3>
-                $(heading)
+                &(heading)
             </h3>
             </div>
             
             <div>
-                $(date)
+                &(date)
             </div>
             <div>
-                $(content)
+                &(content)
                 
             </div>
         </div>
