@@ -101,11 +101,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articlename', function(req, res){
+app.get('/:Articlename', function(req, res){
     //articleName = Article-one
     //articles[articleName] == {} content object for article one
-    var articleName = req.params.articleName;
-    res.send(createtemplate(articles[articleName]));
+    var ArticleName = req.params.ArticleName;
+    res.send(createtemplate(articles[ArticleName]));
 });
 
 
