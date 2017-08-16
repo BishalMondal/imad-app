@@ -4,4 +4,10 @@ var element = document.getElementById('main-text'
             );
 element.innertHTML = 'New Value';
 
-//var element = document.getElementById('main-text')
+//move the image onclick
+
+var img = document.getelementById('madi');
+
+img.onclick = function() {
+    img.style.marginLeft = '100px';
+};
