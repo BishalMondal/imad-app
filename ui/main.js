@@ -22,7 +22,7 @@ button.onclick = function(){
     };
     
     //Make the request
-    request.open('GET', 'http://bishalmondal2015.imad.hasura-app.io/counter', true);
+    request.open('GET', 'https://bishalmondal2015.imad.hasura-app.io/counter', true);
     request.send(null);
 };
 
