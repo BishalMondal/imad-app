@@ -29,7 +29,7 @@ button.onclick = function(){
 
 
 var submit = document.getElementById('submit_bttn');
-button.onclick = function(){
+submit_bttn.onclick = function(){
     //Create a requset object
     var request = new XMLHttpRequest();
     
@@ -67,11 +67,4 @@ button.onclick = function(){
 
 
 
-submit.onclick = function(){
-  //Make a request to the server and send the name
-  
-  //capture a list of a name and render is as a list
-  
-};
-
-
+s
