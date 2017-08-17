@@ -47,7 +47,7 @@ submit.onclick = function(){
   }
   
   var ul = document.getElementById('name_list');
-  ui.innerHTML = list;
+  ul.innerHTML = list;
 };
 
 
