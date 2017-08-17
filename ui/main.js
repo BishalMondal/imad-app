@@ -29,7 +29,7 @@ button.onclick = function(){
 
 
 var submit = document.getElementById('submit_bttn');
-submit_bttn.onclick = function(){
+submit.onclick = function(){
     //Create a requset object
     var request = new XMLHttpRequest();
     
@@ -39,14 +39,14 @@ submit_bttn.onclick = function(){
             //Take some action
             if(request.status === 200){
                 var names = request.responseText;
-                names = JSON.pasre(names);
-                 var list ='';
-                 for(var i=0; i<names.length;  i++){
-                      list +='<li>' + names[i] + '</li>';
-                 }
+                names = JSON.parse(names);
+                var list ='';
+                for(var i=0; i<names.length;  i++){
+                    list +='<li>' + names[i] + '</li>';
+                }
                   
-                 var ul = document.getElementById('name_list');
-                 ul.innerHTML = list;
+                var ul = document.getElementById('name_list');
+                ul.innerHTML = list;
             }
         }
         //Not done yet
