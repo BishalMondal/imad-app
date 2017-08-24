@@ -124,8 +124,6 @@ app-get('/test-db', function(req, res) {
     
     
 });
-        
-    
 });
 
 var counter = 0;
