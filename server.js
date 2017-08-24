@@ -119,7 +119,7 @@ app-get('/test-db', function(req, res) {
             res.ststus(500).send(err.ToString());
         }
         else{
-            res.send(JSON.stringyfy(result.rows));
+            res.send(JSON.stringify(result.rows));
         }
     
     
