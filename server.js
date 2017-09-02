@@ -89,7 +89,7 @@ function createtemplate(data){
             </div>
             
             <div>
-                ${date}
+                ${date.toDateString()}
             </div>
             <div>
                 ${content}
